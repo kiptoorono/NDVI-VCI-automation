@@ -1,0 +1,18 @@
+=(B2 - AVERAGE($B$2:$B$25)) / STDEV.P($B$2:$B$25)
+=(B2 - AVERAGE($B$2:$B$25)) / STDEV.P($B$2:$B$25)
+
+Mean ($\mu$): =AVERAGE($B$2:$B$25)Population Standard Deviation ($\sigma$): =STDEV.P($B$2:$B$25)
+
+=trigger-value)/(trigger-exit)
+
+Mean ($\mu$): Use =AVERAGE(G2:G24)Variance ($v$): Use =VAR.P(G2:G24)Scale ($\beta$): =Variance / MeanShape ($\alpha$): =Mean / Scale
+
+
+
+print(f"From Payout List -> Mean: {mu:.4f}, Variance: {var:.6f}")
+
+
+shape1, scale1 = 0.2423, 0.3606
+shape2, scale2 = 0.22086, 0.28413
+
+
