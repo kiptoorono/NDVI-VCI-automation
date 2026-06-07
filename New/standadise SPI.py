@@ -11,7 +11,7 @@ def convert_daily_to_dekadal(workbook_path: str, source_sheet: str, output_sheet
     
     src = wb[source_sheet]
     
-    # 1. Identify Year Columns
+    # Identify Year Columns
     years = []
     col = 2
     while src.cell(row=1, column=col).value is not None:
@@ -21,7 +21,7 @@ def convert_daily_to_dekadal(workbook_path: str, source_sheet: str, output_sheet
     
     print(f"Found {len(years)} year columns.")
 
-    # 2. Robust Dekad Calculation
+    # Dekad Calculation
     def get_dekad_from_cell(cell_value):
         if isinstance(cell_value, datetime):
             dt = cell_value
@@ -43,7 +43,7 @@ def convert_daily_to_dekadal(workbook_path: str, source_sheet: str, output_sheet
         d_idx = 1 if day <= 10 else 2 if day <= 20 else 3
         return (month - 1) * 3 + d_idx
 
-    # 3. Aggregate Data
+    # Aggregate Data
     dekadal_results = {d: {y['col']: [] for y in years} for d in range(1, 37)}
 
     print("Processing rows...")
@@ -65,7 +65,7 @@ def convert_daily_to_dekadal(workbook_path: str, source_sheet: str, output_sheet
 
     print(f"Successfully read {count_processed} daily rows.")
 
-    # 4. Write to New Sheet
+    # Write to New Sheet
     if output_sheet in wb.sheetnames:
         del wb[output_sheet]
     ws_new = wb.create_sheet(output_sheet)
@@ -76,7 +76,7 @@ def convert_daily_to_dekadal(workbook_path: str, source_sheet: str, output_sheet
         row_data = [d]
         for y in years:
             values = dekadal_results[d][y['col']]
-            # Using SUM for Rainfall. Change to average if this is SPI.
+            # Using SUM for Rainfall. 
             row_data.append(sum(values) if values else 0)
         ws_new.append(row_data)
 

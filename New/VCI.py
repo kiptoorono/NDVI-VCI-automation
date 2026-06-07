@@ -91,4 +91,4 @@ def analyze_ndvi_dual_seasons(
 if __name__ == "__main__":
     path = r"C:\Users\Rono\Desktop\Excel workbook automation\Combine_UAI_Final_NDVI_final.xlsx"
     analyze_ndvi_dual_seasons(path)
-    print("Computation complete. .")
+    print("Computation complete.")

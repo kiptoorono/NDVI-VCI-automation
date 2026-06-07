@@ -84,7 +84,7 @@ def analyze_ndvi_with_transposition(
     p1_mu, p1_sigma, p1_z = get_column_stats(p1_sums)
     p2_mu, p2_sigma, p2_z = get_column_stats(p2_sums)
 
-    # Save Horizontal Sums (Optional but kept for your records)
+    # Save Horizontal Sums 
     if sums_sheet_name in wb.sheetnames:
         del wb[sums_sheet_name]
     ws_sums = wb.create_sheet(sums_sheet_name)
@@ -110,10 +110,10 @@ def analyze_ndvi_with_transposition(
     for i in range(len(valid_labels)):
         ws_trans.append([valid_labels[i], p1_sums[i], p2_sums[i], p1_z[i], p2_z[i]])
 
-    # ADD SUMMARY ROWS AT THE BOTTOM
-    ws_trans.append([]) # Blank spacer row
     
-    # Mean Row (only for sums; z-score mean not required)
+    ws_trans.append([]) 
+    
+    # Mean Row 
     ws_trans.append([
         "Mean",
         p1_mu,
