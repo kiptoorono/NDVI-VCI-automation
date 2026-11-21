@@ -1,4 +1,4 @@
-# ◈ NDVI / VCI Insurance Risk Automation
+# ◈ NDVI / VCI e Automation
 
 > Index-based agricultural risk monitoring and payout automation for underwriting, claims support, and drought stress assessment.
 
@@ -17,7 +17,7 @@ In practical terms, the project is designed to answer questions such as:
 
 ## ◍ Underwriting and Insurance Lens
 
-The repository is designed around index insurance logic rather than claim-by-claim loss adjustment. Instead of relying on individual farm damage assessments, it uses satellite and climate indicators to model regional agricultural stress and convert that into a normalized risk signal.
+The repository is designed around index insurance logic rather than claim-by-claim loss adjustment. It uses satellite and climate indicators to model regional agricultural stress and convert that into a normalized risk signal.
 
 The core operating flow is:
 
