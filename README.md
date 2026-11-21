@@ -1,4 +1,4 @@
-# ◈ NDVI / VCI e Automation
+# ◈ NDVI / VCI  Automation
 
 > Index-based agricultural risk monitoring and payout automation for underwriting, claims support, and drought stress assessment.
 
